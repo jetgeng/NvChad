@@ -72,6 +72,7 @@ M.plugins = {
       cmp = true,
       nvimtree = true,
       autopairs = true,
+      autosave = true,
    },
    options = {
       packer = {
@@ -221,6 +222,7 @@ M.mappings.plugins = {
       live_grep = "<leader>fw",
       oldfiles = "<leader>fo",
       themes = "<leader>th", -- NvChad theme picker
+      project = "<leader>fp"
    },
 }
 

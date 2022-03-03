@@ -12,7 +12,23 @@ local plugins = {
    { "nvim-lua/plenary.nvim" },
    { "lewis6991/impatient.nvim" },
    { "nathom/filetype.nvim" },
-
+   { "nvim-telescope/telescope-project.nvim"},
+   {
+     "phaazon/hop.nvim",
+     branch = 'v1',
+     config = function()
+       require 'hop'.setup{ keys = 'etovxqpdygfblzhckisuran'}
+     end
+   },
+   { 
+     "Pocco81/AutoSave.nvim", 
+      enabled = true,
+      events = {"InsertLeave","TextChanged"},
+      config = override_req("autosave", "plugins.configs.others", "autosave"),
+      setup = function()
+         require("core.utils").packer_lazy_load "AutoSave.nvim"
+      end,
+   },
    {
       "wbthomason/packer.nvim",
       event = "VimEnter",
